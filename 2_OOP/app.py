@@ -12,28 +12,25 @@ needs logging, testing, input validation...
 
 
 import pandas as pd
-import requests
-import json
-from recipe.recipe import Recipe, Health, reasons_to_hire_me
+from recipe.recipe import Recipe, Health
+from reasons_to_hire_me import reasons_to_hire_me
 
 
 
 
 if __name__ == "__main__":
 
-
     while True:
-        user_input = int(input('How many recipes do you want to eat?  '))
+        user_input = int(input('How many meals do you want to eat?  '))
         if user_input > 10:
             print("That's a bit high no? Let's try a lower number")
-            continue
         elif user_input < 2:
             print("I'm Hungry!")
-            continue
         else:
             break
 
-    df = pd.read_json('../data/open_recipes.json', lines=True)
+
+    df = pd.read_json('data/open_recipes.json', lines=True)
 
     recipes = []
     for x in range(user_input):
@@ -49,7 +46,15 @@ if __name__ == "__main__":
 
 
 
+'''
+Improvements
 
+- Giving the user the choice to select the meals she wants to eat (eg. "I'm feeling Thai today") 
+- Improving clean code practices
+- Making it relevant for business purposes
+- Expanding the Health class with eg. Sports, which lowers the amount of calories (because you burn calories)
+- ... Not really a lot of interesting improvements. This project, more than Sales Prediction, was aimed to show
+my capabilities in OOP. It might be expanded to be a meal tracker or something like that, but that was not my intent
 
-
+'''
 
