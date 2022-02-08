@@ -51,7 +51,7 @@ Improvements
 
 - Giving the user the choice to select the meals she wants to eat (eg. "I'm feeling Thai today") 
 - Improving clean code practices
-- Making it relevant for business purposes
+- Making it relevant for business purposes 
 - Expanding the Health class with eg. Sports, which lowers the amount of calories (because you burn calories)
 - ... Not really a lot of interesting improvements. This project, more than Sales Prediction, was aimed to show
 my capabilities in OOP. It might be expanded to be a meal tracker or something like that, but that was not my intent
